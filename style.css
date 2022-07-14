@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Brygada 1918', serif;
+    background-image: url('images/money.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.897);
+    background-blend-mode: darken;
+    color: whitesmoke;
+}
+
+.main {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    grid-template-areas: 
+    'header calc'
+    'form1 calc'
+    'form2 calc';
+}
+
+.budget {
+    grid-area: form1;
+}
+.budget fieldset {
+    display: grid;
+    padding: 1rem;
+    row-gap: 0.5rem;
+    background-color: rgba(0, 84, 240, 0.24);
+    border: 0.2rem solid rgba(100, 148, 237, 0.486);
+    border-radius: 0.5rem;
+}
+
+.expenses {
+    grid-area: form2;
+}
+.expenses fieldset {
+    display: grid;
+    padding: 1rem;
+    row-gap: 0.5rem;
+    background-color: rgba(0, 84, 240, 0.24);
+    border: 0.2rem solid rgba(100, 148, 237, 0.486);
+    border-radius: 0.5rem;
+}
+
+legend {
+    font-size: 1.4rem;
+    background-color: rgba(0, 84, 240, 0.24);
+    border: 0.2rem solid rgba(100, 148, 237, 0.486);
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+}
+
+label {
+    font-size: 1.25rem;
+    padding: 0.3rem;
+    /* background-color: rgba(0, 84, 240, 0.24); */
+    /* border: 0.2rem solid rgba(100, 148, 237, 0.486); */
+    border-radius: 0.5rem;
+}
+
+input {
+    outline: none;
+    border: 0.2rem solid rgba(100, 148, 237, 0.486);
+    background-color: rgba(0, 84, 240, 0.116);
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+}
+
+input[type=submit] {
+    transition: 0.5s;
+    width: 8rem;
+    margin-top: 1rem;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(100, 148, 237, 0.486);
+}
+
+.title {
+    padding: 1rem;
+    background-color: rgba(0, 84, 240, 0.24);
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    grid-area: header;
+    border: 0.2rem solid rgba(100, 148, 237, 0.486);
+    border-radius: 0.5rem;
+}
+
+.calcArea {
+    grid-area: calc;
+    background-color: rgba(0, 84, 240, 0.24);
+    border: 0.2rem solid rgba(100, 148, 237, 0.486);
+    border-radius: 0.5rem;
+    padding: 3rem 0rem;
+    height: fit-content;
+
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-areas: 'budget expense balance'
+    'calcarea calcarea calcarea';
+    align-content: flex-start;
+    row-gap: 2rem;
+    justify-items: center;
+}
+
+.budgetArea {
+    grid-area: budget;
+}
+
+.expensesArea {
+    grid-area: expense;
+}
+
+.balanceArea {
+    grid-area: balance;
+}
+
+.area {
+    display: grid;
+    row-gap: 2rem;
+    justify-items: center;
+}
+
+.area>i {
+    font-size: 2.5rem;
+    color: rgba(134, 248, 134, 0.548);
+}
+
+.calcArea span {
+    font-size: 2rem;
+}
+
+.value {
+    margin-left: 0.5rem;
+}
+
+.budgetArea span {
+    color: green;
+}
+
+.expensesArea span {
+    color: red;
+}
+
+.table th {
+    font-size: 1.5rem;
+    padding: 0.5rem 0rem;
+}
+
+.table td {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.error {
+    background-color: brown;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-height: fit-content;
+    display: none;
+}
+
+.modify {
+    font-size: 1.2rem;
+    color: cornflowerblue;
+}
+
+.delete {
+    font-size: 1.2rem;
+    color: rgb(134, 1, 1);
+}
+
+.expensesOutput {
+    /* background-color: rgb(7, 109, 226); */
+    grid-area: calcarea;
+    /* width: 90%; */
+    row-gap: 1rem;
+}
+
+.expenseTab {
+    background-color: rgba(165, 42, 42, 0.178);
+    border: 0.2rem solid rgba(165, 42, 42, 0.39);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 2fr;
+    column-gap: 2rem;
+    align-items: center;
+    padding: 0.3rem 1rem;
+}
+
+.buttons {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr;
+    column-gap: 1rem;
+}
+
+.expenseTab span {
+    /* background-color: blue; */
+    justify-self: end;
+    font-size: 0.9rem;
+    color: red;
+}
+
+.expenseTab h2 {
+    font-size: 1.1rem;
+}
+
+
+

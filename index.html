@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff9a26a1ab.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>Budget App</title>
+</head>
+<body>
+    <main class="main">
+        <h1 class="title">Budget Calculator</h1>
+        <form action="" class="budget">
+            <fieldset>
+                <span class="budgetError error"></span>
+                <legend>Your Budget</legend>
+                <label for="budget">Please enter your budget</label>
+                <input type="number" min="1" name="budget" class="budgetInput inp">
+                <input type="submit" class="calc" value="Calculate">
+            </fieldset>
+        </form>
+        <form action="" class="expenses">
+            <fieldset>
+                <span class="expenseError error"></span>
+                <legend>Your Expenses</legend>
+                <label for="myExpense">Please Enter Your Expense</label>
+                <input type="text" name="myExpense" id="myExpense" minlength="1" class="inp">
+                <label for="myExpenseAmount">Please Enter Your Expense Amount</label>
+                <input type="number" name="myExpenseAmount" id="myExpenseAmount" class="inp" min="1">
+                <input type="submit" class="expenseCalc" value="Add Expense">
+            </fieldset>
+        </form>
+        <div class="calcArea">
+            <div class="budgetArea area">
+                <h2>Budget</h2>
+                <i class="fa-solid fa-money-bill-1"></i>
+                <span>$<span class="budgetValue value">0</span></span>
+            </div>
+            <div class="expensesArea area">
+                <h2>Expenses</h2>
+                <i class="fa-solid fa-credit-card"></i>
+                <span>$<span class="expenseValue value">0</span></span>
+            </div>
+            <div class="balanceArea area">
+                <h2>Balance</h2>
+                <i class="fa-solid fa-dollar-sign"></i>
+                <span>$<span class="balanceValue value">0</span></span>
+            </div>
+            <div class="expensesOutput">
+                <!-- <div class="expenseTab">
+                    <h2 class="expenseTitle">Car</h2>
+                    <span>$<span class="expenseValue">200</span></span>
+                    <div class="buttons">
+                        <a href="#" class="modify"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="#" class="delete"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>
